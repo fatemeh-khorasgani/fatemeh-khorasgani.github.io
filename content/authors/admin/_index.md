@@ -31,7 +31,7 @@ profiles:
     url: 'fatemeh@uoregon.edu'
     label: E-mail Me
   - icon: brands/github
-    url: https://github.com/fatemehstats
+    url: https://github.com/fatemeh-khorasgani
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/fatemeh-ghazavi-khorasgani-265050252
   - icon: academicons/google-scholar
@@ -114,8 +114,4 @@ skills:
 
 ## About Me
 
-I am a PhD student in Psychology at University Name, working with Prof. Advisor Name. My research examines how social and psychological factors influence health behavior and well-being. I use a combination of experimental methods, surveys, and longitudinal designs to understand these processes.
-
-I am particularly interested in how personality traits and social relationships shape health outcomes over time. My current projects investigate stress, coping, and resilience in diverse populations.
-
-Before starting my PhD, I completed my BA in Psychology at Undergraduate University, where I developed my passion for research through work in behavioral science labs and an honors thesis project.
+I'm a PhD student in Psychology at the University of Oregon, studying how social networks and environment shape our decisions and wellbeing — using tools from statistics, machine learning, and network science to turn messy human data into something actionable. I build research tools and models that translate psychological theory into interventions people can actually use, from personalized feedback systems to longitudinal models of adolescent social dynamics.
