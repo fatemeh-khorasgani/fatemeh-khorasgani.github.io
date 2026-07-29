@@ -8,7 +8,7 @@
 # See full list: https://docs.hugoblox.com/getting-started/customization/#appearance
 appearance:
   mode: system
-  color: cyan
+  color: earth
 
 # SEO
 marketing:
