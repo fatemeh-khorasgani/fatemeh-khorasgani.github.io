@@ -114,4 +114,4 @@ skills:
 
 ## About Me
 
-I'm a PhD student in Psychology at the University of Oregon, studying how social networks and environment shape our decisions and wellbeing — using tools from statistics, machine learning, and network science to turn messy human data into something actionable. I build research tools and models that translate psychological theory into interventions people can actually use, from personalized feedback systems to longitudinal models of adolescent social dynamics.
+I'm a PhD student in Psychology at the University of Oregon, studying how social networks and environment shape our decisions and wellbeing, using tools from statistics, machine learning, and network science to turn messy human data into something actionable. I build research tools and models that translate psychological theory into interventions people can actually use, from personalized feedback systems to longitudinal models of adolescent social dynamics.
