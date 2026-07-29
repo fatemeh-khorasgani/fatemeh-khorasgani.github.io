@@ -63,5 +63,4 @@ sections:
     design:
       view: card
       columns: 2
-        padding: [0, 0, 0, 0]
 ---
