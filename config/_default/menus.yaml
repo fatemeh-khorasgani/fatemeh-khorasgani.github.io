@@ -15,9 +15,6 @@ main:
   - name: Teaching
     url: /teaching/
     weight: 40
-  - name: Blog
-    url: /post/
-    weight: 50
   - name: Experience
     url: /experience/
     weight: 60
