@@ -1,0 +1,429 @@
+---
+export function getStaticPaths() {
+  const projects = {
+  "carbon-feedback": {
+    title: "Personalized Carbon Feedback and Behavior Change",
+    shortTitle: "Personalized Carbon Feedback",
+    eyebrow: "Randomized behavioral intervention",
+    question: "Can personalized behavioral feedback help people make lower-carbon choices?",
+    overview:
+      "I co-designed and evaluated a randomized, two-wave carbon-feedback intervention with a final analytic sample of 752 adults in Atlantic Canada.",
+    metric: "752",
+    metricLabel: "participants in the final analytic sample",
+    challenge:
+      "People often underestimate the environmental effects of everyday behaviors, and intentions do not always translate into action. Our goal was to create feedback that was personally relevant, understandable, actionable, and respectful of participants’ autonomy.",
+    contribution:
+      "As one of the project’s two primary researchers, I co-designed the study and intervention, developed the survey and study materials, supported preregistration, managed data collection, analyzed and interpreted the results, and co-wrote the manuscript. I also built the carbon-footprint calculator in Qualtrics using JavaScript, converting participants’ responses into real-time footprint estimates, visual breakdowns, and context-sensitive recommendations.",
+    approach: [
+      "Random assignment to personalized carbon feedback or a control condition",
+      "Baseline assessment and an approximately two-month follow-up",
+      "Personalized estimates across major lifestyle domains",
+      "Context-sensitive food and transportation recommendations",
+      "Assessment of intentions, knowledge, perceived change, and self-reported behavior",
+    ],
+    methods: [
+      "Randomized experimental design",
+      "Longitudinal follow-up",
+      "Qualtrics",
+      "Custom JavaScript integration",
+      "Mixed ANOVA",
+      "t-tests and chi-square tests",
+      "Effect sizes",
+      "Sensitivity analyses",
+    ],
+    takeaway:
+      "The clearest intervention effects emerged for intentions, carbon-related learning, and perceived behavior change, while effects on self-reported emissions were more nuanced and sensitive to analytic decisions. The project strengthened my ability to evaluate an intervention honestly when outcomes vary across measures.",
+    relevance:
+      "This project combined behavioral theory, personalization, user-facing feedback, experimentation, and stakeholder needs—the same research cycle used to understand users and evaluate products or programs.",
+    demoUrl:
+      "https://mun.az1.qualtrics.com/jfe/form/SV_3yrwZuIv0Jq7xUq?Q_CHL=qr",
+    status: "Manuscript in preparation; findings contributed to Net Zero Atlantic research and policy reports.",
+  },
+  "eco-anxiety-well-being": {
+    title: "Eco-Anxiety and Well-Being in Early Adolescence",
+    shortTitle: "Eco-Anxiety and Well-Being",
+    eyebrow: "Three-wave longitudinal research",
+    question: "How is eco-anxiety related to well-being during early adolescence, and can environmental resources buffer that relationship?",
+    overview:
+      "For my first-year PhD project, I analyzed three waves of survey data from 154 sixth-grade students, examining eco-anxiety, eudaimonic well-being, nature connection, local ecological knowledge, and perceived environmental agency.",
+    metric: "3 waves",
+    metricLabel: "of repeated data from 154 adolescents",
+    challenge:
+      "Longitudinal associations can reflect two different processes: stable differences between people and short-term changes within the same person. Treating these processes as equivalent can produce misleading conclusions.",
+    contribution:
+      "I developed the research questions and hypotheses, evaluated the measures, constructed the analysis plan, conducted the analyses in R, interpreted the findings, and prepared the first-author manuscript under faculty supervision.",
+    approach: [
+      "Separated stable between-person differences from within-person fluctuations",
+      "Used linear mixed models to account for repeated observations and incomplete participation",
+      "Evaluated measurement quality with confirmatory factor analysis and reliability testing",
+      "Tested whether environmental resources changed the eco-anxiety–well-being association",
+    ],
+    methods: [
+      "R",
+      "Linear mixed and multilevel models",
+      "Person-mean centering",
+      "Between-/within-person decomposition",
+      "Confirmatory factor analysis",
+      "FIML and robust estimation",
+      "Moderation",
+      "Data visualization",
+    ],
+    takeaway:
+      "The analysis demonstrated why separating between-person differences from within-person change matters: a relationship found when comparing different adolescents does not necessarily reflect what happens when an individual adolescent changes over time.",
+    relevance:
+      "The project demonstrates experience working with incomplete longitudinal observations, evaluating measurement quality, testing interactions, and turning complex models into conclusions that nontechnical audiences can understand.",
+    demoUrl: null,
+    status: "First-author manuscript under review.",
+  },
+  "immigrant-commitment": {
+    title: "Immigrant Commitment and System Attitudes",
+    shortTitle: "Immigrant Commitment",
+    eyebrow: "Preregistered survey and psychometric research",
+    question: "What helps people feel committed to building a future in a new country?",
+    overview:
+      "For my master’s research, I examined whether a theory of interpersonal commitment could help explain immigrants’ commitment to Canada and their attitudes toward Canadian social systems.",
+    metric: "64.5%",
+    metricLabel: "of variance in commitment explained by the primary model",
+    challenge:
+      "Measures developed for close relationships could not simply be transferred to migration without evaluating whether they captured the same psychological dimensions in a new population and context.",
+    contribution:
+      "I managed the study from design through reporting: adapting the theoretical framework and measures, programming the Qualtrics survey, recruiting Iranian immigrants across Canada through community networks and social media, screening data, conducting analyses, interpreting results, and writing the final project.",
+    approach: [
+      "Adapted measures of satisfaction, investments, alternatives, commitment, and system attitudes",
+      "Evaluated measurement structure and reliability before hypothesis testing",
+      "Examined which factors uniquely explained commitment and system attitudes",
+      "Conducted follow-up analyses and model diagnostics to assess robustness",
+    ],
+    methods: [
+      "Preregistration",
+      "Qualtrics",
+      "Community recruitment",
+      "Exploratory factor analysis",
+      "Reliability analysis",
+      "Multiple and hierarchical regression",
+      "Multicollinearity diagnostics",
+      "SPSS and Jamovi",
+    ],
+    takeaway:
+      "Satisfaction, personal investments, and perceived alternatives jointly explained 64.5% of the variance in commitment to Canada. Measurement analyses also distinguished financial and social dimensions of immigrants’ investments.",
+    relevance:
+      "This work demonstrates how I adapt a theoretical measurement framework to a new population, validate the measures, recruit a specialized sample, and determine which factors best explain an important outcome.",
+    demoUrl: null,
+    status: "First-author manuscript in preparation for submission.",
+  },
+  "peer-contexts": {
+    title: "Climate Anxiety in Adolescent Peer Contexts",
+    shortTitle: "Climate Anxiety in Peer Contexts",
+    eyebrow: "Longitudinal survey and peer-nomination data",
+    question: "Do shared climate-related emotions reflect peer influence, social selection, or common context?",
+    overview:
+      "This project integrates repeated survey responses with peer-nomination data to examine how adolescents’ eco-anxiety relates to the emotions and experiences of their peers across three school-based waves.",
+    metric: "2 data types",
+    metricLabel: "repeated surveys and peer nominations",
+    challenge:
+      "Similarity between peers can have several explanations. Friends may influence one another, people may select similar friends, or both may respond to a shared context. The analysis needed to test competing interpretations rather than treat similarity as evidence of influence.",
+    contribution:
+      "I derived peer-level exposure and interaction variables, analyzed the repeated data in R, compared contemporaneous and lagged patterns, evaluated alternative explanations, and developed the manuscript framework.",
+    approach: [
+      "Combined individual survey data with peer nominations",
+      "Derived measures of peer eco-anxiety, outdoor interaction, and extreme-weather discussion",
+      "Tested contemporaneous co-fluctuation and lagged patterns consistent with selection or influence",
+      "Examined contextual wave effects and potential social buffering",
+    ],
+    methods: [
+      "R",
+      "Peer-network-derived variables",
+      "Mixed-effects modeling",
+      "Between-/within-person decomposition",
+      "Lagged models",
+      "Moderation",
+      "Longitudinal data management",
+    ],
+
+    findingsIntro:
+      "Peer similarity was visible within waves, but the longitudinal evidence did not support a simple peer-contagion explanation.",
+    findings: [
+      {
+        title: "Co-fluctuation within waves",
+        text: "When adolescents reported higher-than-usual eco-anxiety, their close peers also tended to report elevated eco-anxiety during the same measurement wave.",
+      },
+      {
+        title: "Similarity did not imply influence",
+        text: "Lagged models did not provide evidence consistent with social selection or peer contagion. The same-wave relationship weakened after accounting for wave, suggesting that shared context may partly explain the pattern.",
+      },
+      {
+        title: "A potential social-buffering pattern",
+        text: "Higher average eco-anxiety was associated with lower well-being, but this relationship was weaker among adolescents whose close peers also reported higher eco-anxiety.",
+      },
+    ],
+    takeaway:
+      "Peer similarity should not automatically be interpreted as peer influence. By comparing contemporaneous, lagged, and contextual models, this project revealed a more nuanced pattern in which shared context—and potentially shared emotional experience—may matter more than direct transmission.",
+    relevance:
+      "The project shows my ability to integrate relational and survey data, derive interpretable behavioral measures, compare competing explanations, and adjust an analysis when the original model is not defensible.",
+    demoUrl: null,
+    status: "Manuscript in preparation.",
+  },
+};
+
+  return Object.entries(projects).map(([slug, project]) => ({
+    params: { slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={project.overview} />
+    <meta name="theme-color" content="#0b3b49" />
+    <title>{project.title} | Fatemeh Ghazavi Khorasgani</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+      <div class="shell nav">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">FGK</span>
+          <span>Fatemeh Ghazavi Khorasgani</span>
+        </a>
+        <a class="back-link" href="/">← Back to portfolio</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div>
+            <p class="eyebrow">{project.eyebrow}</p>
+            <h1>{project.title}</h1>
+            <p class="question">{project.question}</p>
+            <p class="overview">{project.overview}</p>
+          </div>
+
+          <aside class="metric-card" aria-label="Project highlight">
+            <strong>{project.metric}</strong>
+            <span>{project.metricLabel}</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="shell summary-grid">
+        <article>
+          <p class="section-label">The challenge</p>
+          <h2>What the research needed to resolve</h2>
+          <p>{project.challenge}</p>
+        </article>
+
+        <article class="contribution-card">
+          <p class="section-label">My contribution</p>
+          <h2>What I owned and delivered</h2>
+          <p>{project.contribution}</p>
+          {
+            project.demoUrl && (
+              <a
+                class="demo-button"
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open the personalized carbon calculator demo in a new tab"
+              >
+                Open calculator demo <span aria-hidden="true">↗</span>
+              </a>
+            )
+          }
+        </article>
+      </section>
+
+      <section class="section-tinted">
+        <div class="shell approach-grid">
+          <div>
+            <p class="section-label">Approach</p>
+            <h2>How I investigated the question</h2>
+            <ol>
+              {project.approach.map((item) => <li>{item}</li>)}
+            </ol>
+          </div>
+
+          <div>
+            <p class="section-label">Methods & tools</p>
+            <h2>Research capabilities demonstrated</h2>
+            <ul class="method-list">
+              {project.methods.map((method) => <li>{method}</li>)}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell insight-section">
+        <div class="insight-number" aria-hidden="true">↘</div>
+        <div>
+          <p class="section-label">Key insight</p>
+          <h2>What this project demonstrates</h2>
+          <p class="large-copy">{project.takeaway}</p>
+          <p>{project.relevance}</p>
+          <div class="status"><strong>Status:</strong> {project.status}</div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="shell contact-grid">
+          <div>
+            <p class="section-label section-label-light">Let’s connect</p>
+            <h2>Interested in this work?</h2>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:fatemeh@uoregon.edu">Email me</a>
+            <a
+              href="https://www.linkedin.com/in/fatemeh-ghazavi-khorasgani-265050252"
+              target="_blank"
+              rel="noopener noreferrer"
+            >LinkedIn ↗</a>
+            <a
+              href="https://scholar.google.com/citations?user=7pFvKCwAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Google Scholar ↗</a>
+            <a
+              href="https://orcid.org/0000-0001-8956-837X"
+              target="_blank"
+              rel="noopener noreferrer"
+            >ORCID ↗</a>
+            <a href="/">Return to portfolio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --navy: #082d38;
+    --navy-deep: #051f27;
+    --teal: #0b6170;
+    --teal-bright: #0f7d8d;
+    --aqua: #eef8f9;
+    --gold: #e7ae49;
+    --ink: #173038;
+    --muted: #5d7077;
+    --line: #d4e1e4;
+    --page: min(1120px, calc(100% - 40px));
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #f8fbfc;
+    color: var(--ink);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  a { color: inherit; }
+  p, h1, h2 { margin-top: 0; }
+  h1, h2 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+  h1 { max-width: 850px; margin-bottom: 24px; font-size: clamp(3.2rem, 7vw, 6.4rem); }
+  h2 { margin-bottom: 20px; font-size: clamp(2rem, 3.7vw, 3.2rem); }
+  .shell { width: var(--page); margin-inline: auto; }
+  .skip-link {
+    position: fixed; top: 12px; left: 12px; z-index: 100; padding: 10px 14px;
+    transform: translateY(-160%); border-radius: 8px; background: var(--gold);
+    color: var(--navy-deep); font-weight: 800; text-decoration: none;
+  }
+  .skip-link:focus { transform: translateY(0); }
+  header { border-bottom: 1px solid var(--line); background: rgba(248, 251, 252, 0.94); }
+  .nav { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 24px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--navy); font-weight: 850; text-decoration: none; }
+  .brand-mark {
+    display: grid; width: 42px; height: 42px; place-items: center; border-radius: 12px;
+    background: var(--navy); color: white; font-size: 0.74rem; letter-spacing: 0.06em;
+  }
+  .back-link { color: var(--teal); font-size: 0.9rem; font-weight: 850; text-underline-offset: 4px; }
+  .hero { padding: clamp(78px, 10vw, 130px) 0; background: linear-gradient(135deg, var(--aqua), #f8fbfc 70%); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(270px, 0.55fr); align-items: center; gap: clamp(48px, 8vw, 110px); }
+  .eyebrow, .section-label {
+    margin-bottom: 18px; color: var(--teal); font-size: 0.78rem; font-weight: 900;
+    letter-spacing: 0.13em; text-transform: uppercase;
+  }
+  .question { max-width: 760px; margin-bottom: 18px; color: var(--teal); font-size: 1.25rem; font-weight: 850; line-height: 1.45; }
+  .overview { max-width: 760px; margin-bottom: 0; color: #486169; font-size: 1.1rem; }
+  .metric-card {
+    display: flex; min-height: 260px; flex-direction: column; justify-content: flex-end;
+    border-radius: 28px; padding: 34px; background: var(--navy); color: rgba(255,255,255,.78);
+    box-shadow: 0 24px 65px rgba(8,45,56,.14);
+  }
+  .metric-card strong { color: white; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3rem, 6vw, 5rem); line-height: 1; }
+  .metric-card span { margin-top: 14px; font-weight: 700; line-height: 1.45; }
+  .summary-grid, .approach-grid, .insight-section, .contact-grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(48px, 8vw, 100px);
+  }
+  .summary-grid { padding-block: clamp(80px, 10vw, 130px); }
+  .summary-grid article > p:not(.section-label) { color: #496169; font-size: 1.05rem; }
+  .contribution-card { border-left: 4px solid var(--gold); padding-left: clamp(24px, 4vw, 46px); }
+  .demo-button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+    border-radius: 999px;
+    padding: 11px 20px;
+    background: var(--teal);
+    color: white;
+    font-weight: 850;
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease;
+  }
+  .demo-button:hover,
+  .demo-button:focus-visible {
+    transform: translateY(-2px);
+    background: var(--navy);
+  }
+  .section-tinted { padding-block: clamp(80px, 10vw, 130px); background: var(--aqua); }
+  ol { margin: 0; padding-left: 1.5rem; }
+  ol li { padding: 8px 0 8px 8px; color: #405960; }
+  ol li::marker { color: var(--teal); font-weight: 900; }
+  .method-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+  .method-list li { border: 1px solid #c9dfe3; border-radius: 999px; padding: 8px 13px; background: white; color: var(--navy); font-size: .84rem; font-weight: 800; }
+  .insight-section { align-items: start; padding-block: clamp(90px, 11vw, 150px); }
+  .insight-number { color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: clamp(7rem, 17vw, 14rem); line-height: .75; }
+  .large-copy { color: var(--navy); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 2.5vw, 2.1rem); line-height: 1.35; }
+  .status { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 20px; color: var(--muted); }
+  .contact { padding-block: clamp(70px, 9vw, 110px); background: var(--teal); color: rgba(255,255,255,.82); }
+  .contact h2 { color: white; }
+  .section-label-light { color: #a5e1e8; }
+  .contact-links { border-top: 1px solid rgba(255,255,255,.3); }
+  .contact-links a { display: block; border-bottom: 1px solid rgba(255,255,255,.3); padding: 16px 0; color: white; font-weight: 850; text-decoration: none; }
+  .contact-links a:hover, .contact-links a:focus-visible { color: #ffe0a5; }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+  @media (max-width: 820px) {
+    .hero-grid, .summary-grid, .approach-grid, .insight-section, .contact-grid { grid-template-columns: 1fr; }
+    .metric-card { min-height: 210px; max-width: 520px; }
+    .insight-number { font-size: 7rem; }
+  }
+  @media (max-width: 560px) {
+    :root { --page: min(100% - 28px, 520px); }
+    .brand span:last-child { display: none; }
+    h1 { font-size: clamp(2.9rem, 15vw, 4.2rem); }
+    .back-link { font-size: .82rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
